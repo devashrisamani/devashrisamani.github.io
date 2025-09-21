@@ -1,0 +1,27 @@
+/* CSS for Index Page */
+
+:root {
+  --font-sacramento: "Sacramento", cursive;
+  --font-lora: "Lora", serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+
+  /* Background generated using - https://www.magicpattern.design/tools/css-backgrounds*/
+  background-color: #fff3b0;
+  background-image: radial-gradient(#e09f3e 1px, transparent 1px),
+    radial-gradient(#e09f3e 1px, #fff3b0 1px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+}
+
+body {
+  font-family: var(--font-lora);
+}
+h2 {
+  font-family: var(--font-sacramento);
+  color: darkred;
+}
