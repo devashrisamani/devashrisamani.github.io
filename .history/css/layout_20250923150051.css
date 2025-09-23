@@ -20,11 +20,6 @@ header h2 {
   justify-content: space-between;
   align-items: center;
 }
-
-.portfolio-header .logo {
-  text-decoration: none;
-}
-
 nav h2 {
   margin-top: 0;
   margin-bottom: 0;
@@ -34,5 +29,6 @@ nav h2 {
   list-style-type: none;
   display: flex;
   gap: 20px;
-  text-decoration: none;
+  margin: 0;
+  padding: 0;
 }

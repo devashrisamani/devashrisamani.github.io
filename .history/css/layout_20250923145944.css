@@ -1,4 +1,5 @@
 /* Portfolio Website Layout */
+
 .page-container {
   width: 80%; /* 80% of the width of its parent element i.e. <body>*/
   margin: 2% auto;
@@ -19,20 +20,9 @@ header h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 10%;
 }
-
-.portfolio-header .logo {
-  text-decoration: none;
-}
-
 nav h2 {
   margin-top: 0;
   margin-bottom: 0;
-}
-
-.nav-list {
-  list-style-type: none;
-  display: flex;
-  gap: 20px;
-  text-decoration: none;
 }

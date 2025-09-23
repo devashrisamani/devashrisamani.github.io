@@ -1,0 +1,20 @@
+/* Portfolio Website Layout */
+
+.page-container {
+  width: 80%; /* 80% of the width of its parent element i.e. <body>*/
+  margin: 2% auto;
+}
+
+header {
+  width: 100%;
+  padding: 1%;
+}
+
+header h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+nav h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}

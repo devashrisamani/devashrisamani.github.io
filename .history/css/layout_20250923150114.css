@@ -20,11 +20,6 @@ header h2 {
   justify-content: space-between;
   align-items: center;
 }
-
-.portfolio-header .logo {
-  text-decoration: none;
-}
-
 nav h2 {
   margin-top: 0;
   margin-bottom: 0;
