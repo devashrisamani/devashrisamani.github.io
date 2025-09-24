@@ -11,10 +11,6 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Sacramento&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="/css/css_reset.css" />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/base.css" />
@@ -22,22 +18,32 @@
     <link rel="stylesheet" href="/css/components.css" />
   </head>
   <body>
-    <nav>
-      <div class="nav__bar">
-        <a href="#"><span class="logo nav_logo">D</span>Devashri</a>
-        <div class="nav__menu__btn" id="menu-btn">
-          <!-- Icons from remix icon -->
-          <i class="ri-menu-3-line"></i>
-        </div>
-      </div>
-      <ul class="nav__links" id="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#service">Service</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact" class="btn">Contact</a></li>
-        <a href="#contact" class="btn btn__large">Contact</a>
-      </ul>
-    </nav>
+    <!-- Nav Bar -->
+    <header class="portfolio-header">
+      <a class="logo" href="index.html" aria-label="devashri samani">
+        <h2 class="logo-text">devashri samani</h2>
+      </a>
+
+      <!-- Mobile toggle button -->
+      <button
+        class="nav-toggle"
+        aria-label="Open menu"
+        aria-controls="navbar"
+        aria-expanded="false"
+      >
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+      </button>
+
+      <nav id="navbar" class="nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#about">About</a></li>
+          <li class="nav-item"><a href="#projects">Projects</a></li>
+          <li class="nav-item"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Content -->
+    <main class="page container"></main>
   </body>
 </html>

@@ -35,20 +35,3 @@
 .accordion-body {
   font-family: var(--font-lora);
 }
-
-/* Blogs */
-
-#blogs .list-group-item {
-  border: none;
-  border-bottom: 1px solid #ddd;
-  font-family: var(--font-lora);
-}
-
-#blogs .list-group-item h5 {
-  font-family: var(--font-inter);
-  color: var(--heading-color-dark);
-}
-
-#blogs .list-group-item:hover {
-  background-color: var(--button-color-secondary);
-}

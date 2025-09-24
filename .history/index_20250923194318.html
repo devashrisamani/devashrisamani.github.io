@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dev's portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/css/css_reset.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+  </head>
+  <body>
+    <!-- Bootstrap Navbar -->
+    <header>
+      <nav
+        class="navbar navbar-expand-md"
+        style="background-color: var(--secondary-color)"
+      >
+        <div class="container-fluid">
+          <!-- Logo -->
+          <a class="navbar-brand logo-text" href="index.html"
+            >devashri samani</a
+          >
+
+          <!-- Bootstrap Toggler -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Menu Links -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#projects">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Content -->
+    <main>
+      <!-- Hero Section -->
+      <section class="text-center py-5">
+        <div class="container">
+          <h1 class="display-4 fw-bold mb-3">Hi, I’m Dev</h1>
+          <p class="lead mb-4">
+            I design and build user-friendly digital experiences.
+          </p>
+          <div class="d-flex justify-content-center gap-3">
+            <a href="#projects" class="btn btn-primary btn-lg">View Projects</a>
+            <a href="#contact" class="btn btn-outline-primary btn-lg"
+              >Contact Me</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="container my-5">
+        <h2 class="mb-3">About me</h2>
+        <p>
+          Hello! I'm Devashri Samani, a passionate web developer with a knack
+          for creating beautiful and functional websites. I love turning ideas
+          into reality through code.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

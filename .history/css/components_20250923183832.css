@@ -1,0 +1,22 @@
+/* To Do: Add styles for spacing, width, margins, buttons, cards, form, chips, dropdown for the section "Questions Employers often ask me"  */
+
+/* Logo Text */
+.portfolio-header .logo {
+  text-decoration: none;
+}
+
+.logo-text {
+  font-family: var(--font-sacramento);
+  margin: 0;
+}
+
+/* Nav List  */
+
+.nav-list a {
+  text-decoration: none;
+  color: var(--heading-color-dark);
+}
+
+.nav-list a:hover {
+  color: var(--button-color-primary);
+}

@@ -1,0 +1,32 @@
+/* Portfolio Website Layout */
+.page-container {
+  width: 80%; /* 80% of the width of its parent element i.e. <body>*/
+  margin: 2% auto;
+}
+
+/* header */
+header h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.portfolio-header {
+  background-color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+}
+
+/* Nav Bar */
+
+nav h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}

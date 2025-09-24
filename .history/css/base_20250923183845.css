@@ -18,28 +18,15 @@
   --text-color-dark: #000814; /* for text */
   --text-color-light: #ffffff; /* for containers */
 }
-
-/* after bootstrap.css */
-:root {
-  /* Mapping my fonts/colors to Bootstrap’s CSS vars */
-  --bs-body-font-family: var(--font-lora);
-  --bs-body-color: var(--text-color-dark);
-  --bs-heading-color: var(--heading-color-dark);
-  --bs-primary: var(--button-color-primary);
-  --bs-secondary: var(--button-color-secondary);
-  --bs-link-color: var(--heading-color-dark);
-  --bs-link-hover-color: var(--button-color-primary);
-}
-
 /* Background generated using - https://www.magicpattern.design/tools/css-backgrounds*/
-/* body {
+body {
   min-height: 100vh;
   background-color: #fff3b0;
   background-image: radial-gradient(#e09f3e 1px, transparent 1px),
     radial-gradient(#e09f3e 1px, #fff3b0 1px);
   background-size: 40px 40px;
   background-position: 0 0, 20px 20px;
-} */
+}
 
 body {
   font-family: var(--font-lora);
