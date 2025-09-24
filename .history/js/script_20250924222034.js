@@ -13,3 +13,12 @@ playBtn.addEventListener("click", () => {
   }
   isPlaying = !isPlaying;
 });
+
+import { DotLottie } from "@lottiefiles/dotlottie-web";
+
+const dotLottie = new DotLottie({
+  autoplay: true,
+  loop: true,
+  canvas: document.querySelector("#dotlottie-canvas"),
+  src: "<https://lottie.host/5654fc47-ca3e-486f-ba01-83120598f8a1/T1AEfTyJsq.lottie>", // replace with your .lottie or .json file URL
+});

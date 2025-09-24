@@ -1,4 +1,3 @@
-// Script for the play button in the header section
 const playBtn = document.getElementById("play-btn");
 const audio = document.getElementById("bg-music");
 let isPlaying = false;

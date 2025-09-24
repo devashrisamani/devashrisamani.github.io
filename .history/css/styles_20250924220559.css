@@ -191,7 +191,6 @@ nav {
 }
 
 /* Play button */
-
 .play-btn {
   display: flex;
   align-items: center;
@@ -200,12 +199,12 @@ nav {
   border-radius: 50%;
   width: 3.5rem;
   height: 3.5rem;
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* bigger icon */
 }
 
 /* Play message */
 .play-text {
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   color: var(--extra-light);
   margin-top: 0.5rem;
   text-align: center; /* mobile */

@@ -16,10 +16,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/styles.css" />
-    <script
-      src="https://unpkg.com/@lottiefiles/dotlottie-wc/dist/dotlottie-wc.js"
-      type="module"
-    ></script>
   </head>
   <body>
     <nav>
@@ -90,13 +86,10 @@
         </div>
       </div>
       <!-- DotLottie Animation Canvas Embed -->
-      <div class="header__lines" aria-hidden="true">
-        <dotlottie-wc
-          src="https://lottie.host/5654fc47-ca3e-486f-ba01-83120598f8a1/T1AEfTyJsq.lottie"
-          autoplay
-          loop
-        ></dotlottie-wc>
-      </div>
+      <canvas
+        id="dotlottie-canvas"
+        style="width: 300px; height: 300px"
+      ></canvas>
     </section>
 
     <section class="section__container service__container" id="service">

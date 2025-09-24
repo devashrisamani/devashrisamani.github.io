@@ -16,10 +16,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/styles.css" />
-    <script
-      src="https://unpkg.com/@lottiefiles/dotlottie-wc/dist/dotlottie-wc.js"
-      type="module"
-    ></script>
   </head>
   <body>
     <nav>
@@ -60,18 +56,17 @@
         <div class="header__btn">
           <button class="btn">Resume with download icon</button>
         </div>
-        <div class="header__btn">
-          <!-- Play button with icon -->
-          <button class="btn play-btn" id="play-btn">
-            <i class="ri-play-fill"></i>
-          </button>
-          <!-- Audio element (hidden controls) -->
-          <audio id="bg-music" loop>
-            <source src="audio/Cosy Beats.mp3" type="audio/mpeg" />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <p class="play-text">Play while you read through</p>
+        <!-- Play button with icon -->
+  <button class="btn play-btn" id="play-btn">
+    <i class="ri-play-fill"></i>
+  </button>
+  <!-- Audio element (hidden controls) -->
+  <audio id="bg-music" loop>
+    <source src="music/lofi-jazz.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+</div>
+<p class="play-text">Play while you read through</p>
       </div>
     </header>
 
@@ -88,14 +83,6 @@
         <div class="about__btn">
           <button class="btn">Check out my Resume</button>
         </div>
-      </div>
-      <!-- DotLottie Animation Canvas Embed -->
-      <div class="header__lines" aria-hidden="true">
-        <dotlottie-wc
-          src="https://lottie.host/5654fc47-ca3e-486f-ba01-83120598f8a1/T1AEfTyJsq.lottie"
-          autoplay
-          loop
-        ></dotlottie-wc>
       </div>
     </section>
 
@@ -174,17 +161,5 @@
       </div>
     </section>
     <!-- Contact Section -->
-
-    <script src="js/script.js"></script>
-    <script type="module">
-      import { DotLottie } from "<https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm>";
-
-      new DotLottie({
-        autoplay: true,
-        loop: true,
-        canvas: document.getElementById("canvas"),
-        src: "<https://lottie.host/YOUR_ANIMATION_ID.lottie>", // replace with your .lottie or .json file URL
-      });
-    </script>
   </body>
 </html>
