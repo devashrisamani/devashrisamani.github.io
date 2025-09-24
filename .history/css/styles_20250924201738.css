@@ -194,7 +194,7 @@ nav {
 
 img {
   width: 100%;
-  display: flex;
+  display: block;
 }
 
 .section__description {
