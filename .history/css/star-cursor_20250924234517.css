@@ -1,0 +1,23 @@
+/* Ensure header can anchor the absolutely-positioned canvas */
+.header__container {
+  position: relative;
+}
+
+/* Canvas floats over the header only; clicks pass through */
+#starCanvas {
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none; /* don't block buttons/links */
+  /* transparent background so your gradient shows through */
+  background: transparent;
+}
+
+/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  #starCanvas {
+    display: none;
+  }
+}

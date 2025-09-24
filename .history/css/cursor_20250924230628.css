@@ -1,0 +1,72 @@
+/* Spotlight cursor from Codepen */
+.contact__container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Hide normal cursor only in contact section */
+.contact__container,
+.contact__container * {
+  cursor: none;
+}
+
+.cursor {
+  position: fixed;
+  background: #2128bd;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.shapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 500;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  will-change: transform;
+  opacity: 0.8;
+}
+
+.shape-1 {
+  background: #005ffe;
+  width: 650px;
+  height: 650px;
+  margin: -325px 0 0 -325px;
+}
+.shape-2 {
+  background: #ffe5e3;
+  width: 440px;
+  height: 440px;
+  margin: -220px 0 0 -220px;
+}
+.shape-3 {
+  background: #ffcc57;
+  width: 270px;
+  height: 270px;
+  margin: -135px 0 0 -135px;
+}
+
+.content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  mix-blend-mode: screen;
+}
+
+.content h1 {
+  font-size: 8rem;
+  font-weight: 900;
+  margin: 0;
+  color: #000;
+}

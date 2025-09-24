@@ -17,7 +17,6 @@
     />
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="/css/cursor.css" />
-    <link rel="stylesheet" href="/css/star-cursor.css" />
 
     <script
       src="https://unpkg.com/@lottiefiles/dotlottie-wc/dist/dotlottie-wc.js"
@@ -43,8 +42,6 @@
       </ul>
     </nav>
     <header class="section__container header__container" id="home">
-      <!-- star trail (header-only) -->
-      <canvas id="starCanvas"></canvas>
       <div class="header__image">
         <img src="images/DevashriSamani.jpg" alt="profile" />
       </div>
@@ -224,6 +221,5 @@
         gsap.to("#contact .shape", { x, y, stagger: -0.1, overwrite: "auto" });
       });
     </script>
-    <script src="/js/star-cursor.js"></script>
   </body>
 </html>

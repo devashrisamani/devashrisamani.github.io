@@ -1,0 +1,87 @@
+/* Spotlight cursor from Codepen */
+/* limit custom cursor to header only */
+.header__container {
+  position: relative;
+}
+.header__container,
+.header__container * {
+  cursor: none;
+}
+
+/* layers for the cursor effect */
+.cursor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #2128bd;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  will-change: transform;
+  z-index: 1000;
+}
+
+.shapes {
+  position: absolute;
+  inset: 0; /* fill the header only */
+  pointer-events: none;
+  z-index: 999;
+  /* no background here so it doesn't cover your header */
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.15;
+  will-change: transform;
+}
+
+/* plain CSS equivalents of your SCSS map */
+.shape-1 {
+  background: #005ffe;
+  width: 650px;
+  height: 650px;
+  margin: -325px 0 0 -325px;
+}
+.shape-2 {
+  background: #ffe5e3;
+  width: 440px;
+  height: 440px;
+  margin: -220px 0 0 -220px;
+}
+.shape-3 {
+  background: #ffcc57;
+  width: 270px;
+  height: 270px;
+  margin: -135px 0 0 -135px;
+}
+
+/* center Lottie, behind image/text */
+.header__lines {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  z-index: -1; /* behind your header content */
+  opacity: 0.4;
+}
+.header__lines dotlottie-wc {
+  width: min(60vw, 700px);
+  height: auto;
+}
+
+/* respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .header__container,
+  .header__container * {
+    cursor: auto;
+  }
+  .cursor,
+  .shapes,
+  .header__lines {
+    display: none;
+  }
+}

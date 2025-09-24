@@ -1,0 +1,77 @@
+/* Embedded code from Codepen */
+/* spotlight container sized like the Pen */
+#contact .spotlight {
+  position: relative;
+  height: 60vh; /* adjust as you like */
+  width: 100%;
+  overflow: hidden;
+}
+
+/* hide default cursor only inside the spotlight area */
+#contact .spotlight,
+#contact .spotlight * {
+  cursor: none;
+}
+
+#contact .cursor {
+  position: absolute;
+  background: #2128bd;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1000;
+}
+
+#contact .shapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+#contact .shape {
+  position: absolute;
+  border-radius: 50%;
+  will-change: transform;
+  opacity: 0.8;
+}
+#contact .shape-1 {
+  background: #005ffe;
+  width: 650px;
+  height: 650px;
+  margin: -325px 0 0 -325px;
+}
+#contact .shape-2 {
+  background: #ffe5e3;
+  width: 440px;
+  height: 440px;
+  margin: -220px 0 0 -220px;
+}
+#contact .shape-3 {
+  background: #ffcc57;
+  width: 270px;
+  height: 270px;
+  margin: -135px 0 0 -135px;
+}
+
+/* white layer with screen blend like the Pen */
+#contact .content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: #fff;
+  mix-blend-mode: screen; */
+  color: white;
+}
+#contact .spotlight-title {
+  font-family: Montserrat, sans-serif;
+  font-weight: 900;
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  line-height: 1;
+  margin: 0;
+  color: #000;
+  text-align: center;
+}
