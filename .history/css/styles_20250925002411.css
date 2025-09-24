@@ -359,7 +359,6 @@ a {
   font-weight: 500;
 }
 
-/* Footer */
 .contact__container {
   text-align: center;
 }
@@ -512,72 +511,4 @@ a {
   .portfolio__banner {
     grid-template-columns: repeat(3, 1fr);
   }
-}
-
-/* Forms */
-/* Contact form (Formspree) */
-form.contact-form {
-  max-width: 720px;
-  margin: 2rem auto;
-  display: grid;
-  gap: 1rem;
-}
-
-form.contact-form label {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--extra-light);
-  gap: 0.5rem;
-}
-
-form.contact-form input,
-form.contact-form textarea {
-  width: 100%;
-  padding: 0.9rem 1rem;
-  border-radius: 0.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--white);
-  outline: none;
-  font-family: inherit;
-  font-size: 1rem;
-}
-
-form.contact-form input::placeholder,
-form.contact-form textarea::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-form.contact-form input:focus,
-form.contact-form textarea:focus {
-  border-color: var(--secondary-color);
-  box-shadow: 0 0 0 3px rgba(35, 122, 87, 0.25);
-}
-
-form.contact-form textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-/* Submit button styled like your .btn */
-form.contact-form button {
-  align-self: flex-start;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--white);
-  background-image: var(--gradient-2);
-  border: none;
-  border-radius: 5rem;
-  cursor: pointer;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-form.contact-form button:hover {
-  transform: translateY(-2px);
-  box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.3);
 }

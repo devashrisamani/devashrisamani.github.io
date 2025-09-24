@@ -208,38 +208,19 @@
         optio nisi ut doloremque dicta cupiditate, odit perferendis obcaecati
         itaque esse libero?.
       </p>
-      <!-- Form Section using Formspree -->
-      <form
-        class="contact-form"
-        action="https://formspree.io/f/xanpyglq"
-        method="POST"
-      >
-        <label>
-          Your name:
-          <input type="text" name="name" placeholder="Your Name" required />
-        </label>
+      <!-- modify this form HTML and place wherever you want your form -->
+      <form action="https://formspree.io/f/xanpyglq" method="POST">
         <label>
           Your email:
-          <input
-            type="email"
-            name="email"
-            placeholder="you@example.com"
-            required
-          />
+          <input type="email" name="email" />
         </label>
-
         <label>
           Your message:
-          <textarea
-            name="message"
-            placeholder="Write your message..."
-            required
-          ></textarea>
+          <textarea name="message"></textarea>
         </label>
-
+        <!-- your other form fields go here -->
         <button type="submit">Send</button>
       </form>
-
       <div class="contact__socials">
         <a href="#"><i class="ri-twitter-fill"></i></a>
         <a href="#"><i class="ri-linkedin-fill"></i></a>
