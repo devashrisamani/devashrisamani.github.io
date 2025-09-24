@@ -145,51 +145,6 @@ nav {
   display: none;
 }
 
-/* Header Container */
-
-.header__container {
-  padding-top: 8rem;
-  display: grid;
-  gap: 2rem;
-  isolation: isolate;
-}
-
-.header__content {
-  text-align: center;
-}
-
-.header__content h1 {
-  margin-bottom: 1rem;
-  font-size: 3rem;
-  text-align: center;
-}
-.header__content .section__description {
-  margin-bottom: 2rem;
-}
-/* Header Image */
-
-.header__image {
-  position: relative;
-  isolation: isolate;
-  z-index: -1;
-}
-
-.header__image img {
-  max-width: 450px;
-  margin-inline: auto;
-  border-radius: 25rem;
-}
-
-.header__image::after {
-  position: absolute;
-  content: "DEVASHRI";
-  letter-spacing: 1.5rem;
-  opacity: 0.5;
-  right: 1rem;
-  top: 50%;
-  transform: translate(50%, -50%) rotate(90deg);
-}
-
 /* About */
 
 img {
@@ -209,76 +164,21 @@ a {
   text-decoration: none;
 }
 
-.about-container {
+/* Header Container */
+
+.header__container {
+  padding-top: 8rem;
   display: grid;
   gap: 2rem;
-}
-
-.about__image {
-  position: relative;
   isolation: isolate;
-  max-width: 400px;
-  margin: auto;
 }
 
-.about__img {
-  border-radius: 100%;
-}
-
-.about__bg-1,
-.about__bg-2 {
-  position: absolute;
-  max-width: 150px;
-  z-index: -1;
-}
-
-.about__bg-1 {
-  top: 0;
-  left: 0;
-}
-
-.about__bg-2 {
-  right: 0;
-  bottom: 0;
-}
-
-.about__content {
+.header__content {
   text-align: center;
 }
 
-.about__content .section__description {
-  margin-bottom: 2rem;
-}
-
-/* Service Section */
-
-.service__grid {
-  margin-top: 2rem;
-  display: grid;
-  gap: 1rem;
-}
-
-.service__card {
-  padding: 2rem 1rem;
+.header__content h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
   text-align: center;
-  background-image: var(--gradient-2);
-  border-radius: 1rem;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.service__card span {
-  display: inline-block;
-  margin-bottom: 1rem;
-  font-size: 2rem;
-}
-
-.service__card h4 {
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-  font-weight: 700;
-}
-
-.service__card p {
-  color: var(--extra-light);
-  line-height: 2rem;
 }
