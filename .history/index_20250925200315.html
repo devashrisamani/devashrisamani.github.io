@@ -171,7 +171,7 @@
           <h3 class="portfolio__title">She Codes Website</h3>
           <a
             class="portfolio__link"
-            href="https://devashrisamani.github.io/website_shecodes_week1/"
+            href="https://www.shecodes.io/"
             target="_blank"
             rel="noopener"
           >
@@ -299,125 +299,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script>
       const spot = document.querySelector("#contact .spotlight");
+      const cursor = spot.querySelector(".cursor");
 
-      if (spot) {
-        const cursor = spot.querySelector(".cursor");
-        const title = spot.querySelector(".spotlight-title");
-        const shapes = spot.querySelectorAll(".shape");
-        const rootStyles = getComputedStyle(document.documentElement);
+      spot.addEventListener("mousemove", (e) => {
+        const rect = spot.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
 
-        const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
-
-        const normalizeHex = (value, fallback) => {
-          const trimmed = (value || "").trim();
-          return trimmed && /^#/.test(trimmed) ? trimmed : fallback;
-        };
-
-        const hexToHsl = (hex) => {
-          let clean = normalizeHex(hex, "#000000").replace(/#/g, "");
-          if (clean.length === 3) {
-            clean = clean
-              .split("")
-              .map((char) => char + char)
-              .join("");
-          }
-          const r = parseInt(clean.substring(0, 2), 16) / 255;
-          const g = parseInt(clean.substring(2, 4), 16) / 255;
-          const b = parseInt(clean.substring(4, 6), 16) / 255;
-
-          const max = Math.max(r, g, b);
-          const min = Math.min(r, g, b);
-          let h = 0;
-          let s = 0;
-          const l = (max + min) / 2;
-
-          if (max !== min) {
-            const d = max - min;
-            s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
-            switch (max) {
-              case r:
-                h = (g - b) / d + (g < b ? 6 : 0);
-                break;
-              case g:
-                h = (b - r) / d + 2;
-                break;
-              default:
-                h = (r - g) / d + 4;
-                break;
-            }
-            h /= 6;
-          }
-
-          return { h: h * 360, s: s * 100, l: l * 100 };
-        };
-
-        const toCssHsl = ({ h, s, l }) =>
-          `hsl(${Math.round(h)}deg ${Math.round(s)}% ${Math.round(l)}%)`;
-
-        const adjustHsl = (base, delta = {}) => ({
-          h: (base.h + (delta.h || 0) + 360) % 360,
-          s: clamp(base.s + (delta.s || 0), 0, 100),
-          l: clamp(base.l + (delta.l || 0), 0, 100),
-        });
-
-        const primaryHsl = hexToHsl(
-          normalizeHex(rootStyles.getPropertyValue("--primary-color"), "#093028")
-        );
-        const secondaryHsl = hexToHsl(
-          normalizeHex(rootStyles.getPropertyValue("--secondary-color"), "#237a57")
-        );
-
-        if (title) {
-          title.style.setProperty("--spotlight-color-1", toCssHsl(secondaryHsl));
-          title.style.setProperty("--spotlight-color-2", toCssHsl(adjustHsl(secondaryHsl, { l: -10 })));
-          title.style.setProperty("--spotlight-color-3", toCssHsl(primaryHsl));
-        }
-
-        spot.addEventListener("mousemove", (e) => {
-          const rect = spot.getBoundingClientRect();
-          const x = e.clientX - rect.left;
-          const y = e.clientY - rect.top;
-          const xPercent = clamp((x / rect.width) * 100, 0, 100);
-          const yPercent = clamp((y / rect.height) * 100, 0, 100);
-
-          if (window.gsap && cursor) {
-            gsap.set(cursor, { x, y });
-            gsap.to(shapes, { x, y, stagger: -0.1, overwrite: "auto" });
-          }
-
-          if (title) {
-            const angle = 110 + (xPercent - 50) * 0.7;
-            const hueShift = (xPercent - 50) * 0.25;
-            const lightShift = (50 - yPercent) * 0.2;
-
-            const c1 = adjustHsl(secondaryHsl, { h: hueShift, l: lightShift });
-            const c2 = adjustHsl(secondaryHsl, { h: hueShift * 0.5, l: -lightShift * 0.4 });
-            const c3 = adjustHsl(primaryHsl, { h: -hueShift * 0.6, l: -lightShift * 0.5 });
-
-            title.style.setProperty("--spotlight-pos-x", `${xPercent}%`);
-            title.style.setProperty("--spotlight-pos-y", `${100 - yPercent}%`);
-            title.style.setProperty("--spotlight-angle", `${angle}deg`);
-            title.style.setProperty("--spotlight-color-1", toCssHsl(c1));
-            title.style.setProperty("--spotlight-color-2", toCssHsl(c2));
-            title.style.setProperty("--spotlight-color-3", toCssHsl(c3));
-          }
-        });
-
-        spot.addEventListener("mouseleave", () => {
-          if (title) {
-            title.style.setProperty("--spotlight-pos-x", "50%");
-            title.style.setProperty("--spotlight-pos-y", "50%");
-            title.style.setProperty("--spotlight-angle", "120deg");
-            title.style.setProperty("--spotlight-color-1", toCssHsl(secondaryHsl));
-            title.style.setProperty("--spotlight-color-2", toCssHsl(adjustHsl(secondaryHsl, { l: -10 })));
-            title.style.setProperty("--spotlight-color-3", toCssHsl(primaryHsl));
-          }
-
-          if (window.gsap && cursor) {
-            gsap.to(shapes, { x: 0, y: 0, stagger: -0.1, overwrite: "auto" });
-          }
-        });
-      }
+        gsap.set(cursor, { x, y });
+        gsap.to("#contact .shape", { x, y, stagger: -0.1, overwrite: "auto" });
+      });
     </script>
     <script src="/js/star-cursor.js"></script>
   </body>

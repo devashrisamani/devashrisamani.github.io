@@ -445,8 +445,8 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  font-size: 0.95rem;
-  font-weight: 400;
+  font-size: 0.6rem;
+  font-weight: 600;
   color: var(--white);
   text-decoration: none;
   transition: color 0.3s ease;

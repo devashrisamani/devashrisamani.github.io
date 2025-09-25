@@ -15,7 +15,7 @@
 
 #contact .cursor {
   position: absolute;
-  background: #ffffff;
+  background: var(--secondary-color);
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -37,25 +37,37 @@
   opacity: 0.8;
 }
 #contact .shape-1 {
-  background: #052c22;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(35, 122, 87, 0.65),
+    rgba(9, 48, 40, 0.95)
+  );
   width: 650px;
   height: 650px;
   margin: -325px 0 0 -325px;
 }
 #contact .shape-2 {
-  background: #275c34;
+  background: radial-gradient(
+    circle at 70% 30%,
+    rgba(9, 48, 40, 0.5),
+    rgba(35, 122, 87, 0.7)
+  );
   width: 440px;
   height: 440px;
   margin: -220px 0 0 -220px;
 }
 #contact .shape-3 {
-  background: #6f4d8a;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.35),
+    rgba(35, 122, 87, 0.75)
+  );
   width: 270px;
   height: 270px;
   margin: -135px 0 0 -135px;
 }
 
-/* white layer with screen blend like the Pen */
+/* Content layer that centers the headline above the animation */
 #contact .content {
   position: absolute;
   inset: 0;
@@ -72,7 +84,12 @@
   margin: 0;
   color: transparent;
   text-align: center;
-  background: var(--white);
+  background: linear-gradient(
+    120deg,
+    var(--secondary-color),
+    #1b5f46,
+    var(--primary-color)
+  );
   -webkit-background-clip: text;
   background-clip: text;
 }
