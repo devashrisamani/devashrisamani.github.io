@@ -62,20 +62,29 @@
           aspernatur quisquam, ducimus doloremque. Illo architecto iste odio
           quia eum?
         </p>
-        <div class="header__btn">
-          <button class="btn">Resume with download icon</button>
-        </div>
-        <div class="header__btn">
+        <div class="header__btns">
+          <!-- Resume button (use <a> if you have a PDF to download) -->
+          <a class="btn" href="files/Devashri_Samani_Resume.pdf" download>
+            <i class="ri-download-line"></i>
+            Resume
+          </a>
+
           <!-- Play button with icon -->
-          <button class="btn play-btn" id="play-btn">
+          <button
+            class="btn play-btn"
+            id="play-btn"
+            aria-label="Play background music"
+          >
             <i class="ri-play-fill"></i>
           </button>
+
           <!-- Audio element (hidden controls) -->
           <audio id="bg-music" loop>
             <source src="audio/Cosy Beats.mp3" type="audio/mpeg" />
             Your browser does not support the audio element.
           </audio>
         </div>
+
         <p class="play-text">Play while you read through</p>
       </div>
     </header>
