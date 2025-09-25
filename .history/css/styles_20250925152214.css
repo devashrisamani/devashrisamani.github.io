@@ -201,10 +201,11 @@ nav {
 
 /* Resume button icon spacing */
 .header__btns .btn i {
+  margin-right: 0.5rem;
   font-size: 1.1rem;
 }
 
-/* Play button: reuse .btn */
+/* Play button: reuse .btn, just make it round */
 .play-btn {
   border-radius: 50%; /* circular */
   padding: 0.75rem; /* equal padding for circle */
@@ -220,7 +221,31 @@ nav {
   font-size: 1.2rem;
 }
 
+/* Desktop alignment */
+@media (width > 768px) {
+  .header__btns {
+    justify-content: flex-start;
+  }
+  .play-text {
+    text-align: left;
+  }
+}
+
+/* Play button */
+
+.play-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  font-size: 1.5rem;
+}
+
 /* Play message */
+
 .play-text {
   margin-top: 1rem;
   font-size: 0.9rem;
@@ -228,11 +253,8 @@ nav {
   text-align: center;
 }
 
-/* Desktop alignment */
+/* Desktop view adjustment */
 @media (width > 768px) {
-  .header__btns {
-    justify-content: flex-start;
-  }
   .play-text {
     text-align: left;
   }

@@ -201,6 +201,7 @@ nav {
 
 /* Resume button icon spacing */
 .header__btns .btn i {
+  margin-right: 0.5rem;
   font-size: 1.1rem;
 }
 

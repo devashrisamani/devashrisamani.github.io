@@ -201,10 +201,11 @@ nav {
 
 /* Resume button icon spacing */
 .header__btns .btn i {
+  margin-right: 0.5rem;
   font-size: 1.1rem;
 }
 
-/* Play button: reuse .btn */
+/* Play button: reuse .btn, just make it round */
 .play-btn {
   border-radius: 50%; /* circular */
   padding: 0.75rem; /* equal padding for circle */
@@ -218,6 +219,19 @@ nav {
 .play-btn i {
   margin: 0; /* no spacing inside circle */
   font-size: 1.2rem;
+}
+
+/* Play button */
+
+.play-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  font-size: 1.5rem;
 }
 
 /* Play message */
