@@ -395,15 +395,14 @@ a {
 .portfolio__card {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  padding: 1.25rem 1rem 1.5rem;
+  gap: 1rem;
+  padding: 1rem;
   border-radius: 1rem;
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .portfolio__thumb {
-  position: relative;
   overflow: hidden;
   border-radius: 0.75rem;
 }
@@ -418,51 +417,10 @@ a {
   transform: scale(1.1);
 }
 
-.portfolio__credit {
-  position: absolute;
-  inset: auto 0 0;
-  padding: 0.45rem 0.75rem;
-  font-size: 0.75rem;
-  line-height: 1.1;
-  color: rgba(255, 255, 255, 0.68);
-  background: linear-gradient(
-    180deg,
-    rgba(15, 12, 41, 0) 0%,
-    rgba(15, 12, 41, 0.88) 90%
-  );
-  text-align: center;
-  pointer-events: none;
-}
-
 .portfolio__title {
   font-size: 1.1rem;
   font-weight: 600;
   text-align: center;
-}
-
-.portfolio__link {
-  align-self: center;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  font-size: 0.95rem;
-  font-weight: 400;
-  color: var(--white);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.portfolio__link i {
-  font-size: 1.05rem;
-  transition: transform 0.3s ease;
-}
-
-.portfolio__link:hover {
-  color: var(--secondary-color);
-}
-
-.portfolio__link:hover i {
-  transform: translateX(2px) translateY(-2px);
 }
 
 .portfolio__banner {

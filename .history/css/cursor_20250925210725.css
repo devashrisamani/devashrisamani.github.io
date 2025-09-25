@@ -15,7 +15,7 @@
 
 #contact .cursor {
   position: absolute;
-  background: #ffffff;
+  background: #2128bd;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -43,13 +43,13 @@
   margin: -325px 0 0 -325px;
 }
 #contact .shape-2 {
-  background: #275c34;
+  background: #ffe5e3;
   width: 440px;
   height: 440px;
   margin: -220px 0 0 -220px;
 }
 #contact .shape-3 {
-  background: #6f4d8a;
+  background: #ffcc57;
   width: 270px;
   height: 270px;
   margin: -135px 0 0 -135px;
