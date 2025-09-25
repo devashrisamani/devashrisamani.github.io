@@ -262,61 +262,10 @@ a {
   gap: 2rem;
 }
 
-.about__media {
-  position: relative;
-  max-width: 420px;
-  margin-inline: auto;
-  isolation: isolate;
-}
-
-.about__decor {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-  z-index: -1;
-}
-
-.about__decor dotlottie-wc,
-.about__decor img {
-  width: 200%;
-  height: 200%;
-  max-width: none;
-}
-
-@media (width <= 768px) {
-  .about__container {
-    justify-items: center;
-  }
-
-  .about__media {
-    max-width: 360px;
-    margin-bottom: 3rem;
-  }
-}
-
 .about__img {
   width: 100%;
-  border-radius: 10%;
+  border-radius: 50%;
   display: block;
-  position: relative;
-  z-index: 1;
-}
-
-@media (width <= 576px) {
-  .about__media {
-    max-width: 280px;
-    margin-inline: auto;
-    margin-bottom: 4rem;
-  }
-
-  .about__content {
-    position: relative;
-    z-index: 1;
-    padding-inline: 1rem;
-  }
 }
 
 /* .about__image {
@@ -351,6 +300,35 @@ a {
   margin-bottom: 2rem;
 }
 
+/* === Background animation/decor behind the image === */
+.about__decor {
+  position: absolute;
+  left: -60px; /* nudge to the left of the circle image, like the reference */
+  bottom: -40px; /* sit near the lower-left quadrant */
+  width: 180px;
+  height: 180px;
+  z-index: -1; /* behind the image, but still above section due to isolation */
+  opacity: 0.6; /* subtle */
+  pointer-events: none;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.25));
+}
+
+/* Make embedded lottie or img fill the decor box */
+.about__decor > * {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Slightly smaller on narrow screens */
+@media (max-width: 480px) {
+  .about__decor {
+    left: -30px;
+    bottom: -20px;
+    width: 130px;
+    height: 130px;
+  }
+}
 /* Service Section */
 
 .service__grid {

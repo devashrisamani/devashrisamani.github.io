@@ -284,6 +284,7 @@ a {
   width: 200%;
   height: 200%;
   max-width: none;
+  transform: translateY(-18%);
 }
 
 @media (width <= 768px) {
@@ -293,7 +294,12 @@ a {
 
   .about__media {
     max-width: 360px;
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .about__decor dotlottie-wc,
+  .about__decor img {
+    transform: translateY(-22%);
   }
 }
 
@@ -309,7 +315,12 @@ a {
   .about__media {
     max-width: 280px;
     margin-inline: auto;
-    margin-bottom: 4rem;
+    margin-bottom: 4.5rem;
+  }
+
+  .about__decor dotlottie-wc,
+  .about__decor img {
+    transform: translateY(-28%);
   }
 
   .about__content {

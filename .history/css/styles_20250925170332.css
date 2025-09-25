@@ -293,7 +293,12 @@ a {
 
   .about__media {
     max-width: 360px;
-    margin-bottom: 3rem;
+  }
+
+  .about__decor dotlottie-wc,
+  .about__decor img {
+    width: 160%;
+    height: 160%;
   }
 }
 
@@ -309,7 +314,13 @@ a {
   .about__media {
     max-width: 280px;
     margin-inline: auto;
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .about__decor dotlottie-wc,
+  .about__decor img {
+    width: 125%;
+    height: 125%;
   }
 
   .about__content {

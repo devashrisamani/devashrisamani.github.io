@@ -286,17 +286,6 @@ a {
   max-width: none;
 }
 
-@media (width <= 768px) {
-  .about__container {
-    justify-items: center;
-  }
-
-  .about__media {
-    max-width: 360px;
-    margin-bottom: 3rem;
-  }
-}
-
 .about__img {
   width: 100%;
   border-radius: 10%;
@@ -309,7 +298,13 @@ a {
   .about__media {
     max-width: 280px;
     margin-inline: auto;
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .about__decor dotlottie-wc,
+  .about__decor img {
+    width: 125%;
+    height: 125%;
   }
 
   .about__content {

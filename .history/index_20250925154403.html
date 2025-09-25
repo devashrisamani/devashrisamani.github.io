@@ -89,31 +89,49 @@
     </header>
 
     <section class="section__container about__container" id="about">
-      <div class="about__media">
-        <img class="about__img" src="images/research.png" alt="About me" />
-        <!-- Background animation/decor behind the image -->
-        <div class="about__decor">
-          <!-- Option A: Lottie (already loaded in your page) -->
-          <dotlottie-wc
-            src="https://lottie.host/5654fc47-ca3e-486f-ba01-83120598f8a1/T1AEfTyJsq.lottie"
-            autoplay
-            loop
-          ></dotlottie-wc>
-          <!-- Option B: if you prefer simple dots, swap in a PNG/SVG instead -->
-          <!-- <img src="images/dots.svg" alt="" aria-hidden="true" /> -->
-        </div>
-      </div>
-
+      <div class="about__image"></div>
       <div class="about__content">
-        <h2 class="section__header">A little bit about me</h2>
+        <h2 class="section__header">About me</h2>
         <p class="section__description">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
           repellat! Reiciendis rerum culpa facilis consectetur, minus repellat
-          tempora. Quibusdam, nobis...
+          tempora. Quibusdam, nobis. Earum enim ullam sint iusto ipsum dolore
+          consequuntur quibusdam ex.
         </p>
-        <a class="btn" href="files/Devashri_Samani_Resume.pdf" download>
-          <i class="ri-download-line"></i> Check out my Resume
-        </a>
+        <div class="about__btn">
+          <button class="btn">Check out my Resume</button>
+        </div>
+      </div>
+      <!-- DotLottie Animation Canvas Embed -->
+      <div class="header__lines" aria-hidden="true">
+        <dotlottie-wc
+          src="https://lottie.host/5654fc47-ca3e-486f-ba01-83120598f8a1/T1AEfTyJsq.lottie"
+          autoplay
+          loop
+        ></dotlottie-wc>
+      </div>
+    </section>
+
+    <section class="section__container about__container" id="about">
+      <div class="about__image">
+        <img src="assets/bg.png" alt="bg" class="about__bg-1" />
+        <img src="assets/bg.png" alt="bg" class="about__bg-2" />
+        <img src="assets/about.jpg" alt="about" class="about__img" />
+      </div>
+      <div class="about__content">
+        <h2 class="section__header">Bit About Me</h2>
+        <p class="section__description">
+          A passionate web developer with a creative flair and a knack for
+          turning visions into reality. My journey in web development began with
+          a fascination for coding and design, and it has evolved into a career
+          where I blend aesthetics with functionality. With a focus on user
+          experience and a commitment to staying updated with the latest
+          industry trends, I'm dedicated to creating web solutions that not only
+          meet but exceed expectations.
+        </p>
+        <div class="about__btn">
+          <button class="btn">Download CV</button>
+        </div>
       </div>
     </section>
 

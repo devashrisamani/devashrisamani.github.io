@@ -281,20 +281,9 @@ a {
 
 .about__decor dotlottie-wc,
 .about__decor img {
-  width: 200%;
+  width: 150%;
   height: 200%;
   max-width: none;
-}
-
-@media (width <= 768px) {
-  .about__container {
-    justify-items: center;
-  }
-
-  .about__media {
-    max-width: 360px;
-    margin-bottom: 3rem;
-  }
 }
 
 .about__img {
@@ -303,20 +292,6 @@ a {
   display: block;
   position: relative;
   z-index: 1;
-}
-
-@media (width <= 576px) {
-  .about__media {
-    max-width: 280px;
-    margin-inline: auto;
-    margin-bottom: 4rem;
-  }
-
-  .about__content {
-    position: relative;
-    z-index: 1;
-    padding-inline: 1rem;
-  }
 }
 
 /* .about__image {

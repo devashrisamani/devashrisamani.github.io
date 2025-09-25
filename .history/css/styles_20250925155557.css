@@ -262,69 +262,22 @@ a {
   gap: 2rem;
 }
 
-.about__media {
-  position: relative;
-  max-width: 420px;
-  margin-inline: auto;
-  isolation: isolate;
-}
-
-.about__decor {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-  z-index: -1;
-}
-
-.about__decor dotlottie-wc,
-.about__decor img {
-  width: 200%;
-  height: 200%;
-  max-width: none;
-}
-
-@media (width <= 768px) {
-  .about__container {
-    justify-items: center;
-  }
-
-  .about__media {
-    max-width: 360px;
-    margin-bottom: 3rem;
-  }
-}
-
 .about__img {
   width: 100%;
-  border-radius: 10%;
+  border-radius: 50%;
   display: block;
-  position: relative;
-  z-index: 1;
 }
 
-@media (width <= 576px) {
-  .about__media {
-    max-width: 280px;
-    margin-inline: auto;
-    margin-bottom: 4rem;
-  }
-
-  .about__content {
-    position: relative;
-    z-index: 1;
-    padding-inline: 1rem;
-  }
-}
-
-/* .about__image {
+.about__image {
   position: relative;
   isolation: isolate;
   max-width: 400px;
   margin: auto;
-} */
+}
+
+.about__img {
+  border-radius: 100%;
+}
 
 /* .about__bg-1,
 .about__bg-2 {
