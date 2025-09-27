@@ -798,3 +798,7 @@ form.contact-form button:hover {
 .gallery-item {
   margin: 5px;
 }
+.play__container :is(.section__header, .section__description) {
+  text-align: left;
+  margin-inline-start: unset;
+}
