@@ -11,8 +11,8 @@
 
 /* Generated using UI Gradients */
 :root {
-  --primary-color: #a3b18a;
-  --secondary-color: #588157;
+  --primary-color: #093028;
+  --secondary-color: #237a57;
   --extra-light: #f3f4f6;
   --white: #ffffff;
   /* --gradient-1: linear-gradient(to right, #0f0c29, #302b63, #24243e); */
@@ -53,7 +53,6 @@ body {
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
-  font-family: var(--font-italiana);
 }
 
 .btn {
@@ -185,7 +184,7 @@ nav {
 .header__image img {
   max-width: 450px;
   margin-inline: auto;
-  border-radius: 2rem;
+  border-radius: 3rem;
 }
 
 .header__image::after {
