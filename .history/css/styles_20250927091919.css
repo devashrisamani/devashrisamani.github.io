@@ -4,19 +4,16 @@
   --font-lora: "Lora", serif;
   --font-inter: "Inter", serif;
   --font-montserrat: "Montserrat", sans-serif;
-  --font-italiana: "Italiana", serif;
 }
 
 /* Color Variables */
 
-/* Generated using UI Gradients */
 :root {
-  --primary-color: #a3b18a;
-  --secondary-color: #588157;
+  --primary-color: #093028;
+  --secondary-color: #237a57;
   --extra-light: #f3f4f6;
   --white: #ffffff;
-  /* --gradient-1: linear-gradient(to right, #0f0c29, #302b63, #24243e); */
-  --gradient-1: linear-gradient(to right, #4b6cb7, #182848);
+  --gradient-1: linear-gradient(to right, #0f0c29, #302b63, #24243e);
   --gradient-2: linear-gradient(
     to bottom,
     var(--primary-color),
@@ -53,7 +50,6 @@ body {
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
-  font-family: var(--font-italiana);
 }
 
 .btn {
@@ -163,12 +159,12 @@ nav {
 }
 
 .header__title {
-  font-family: var(--font-italiana);
+  font-family: var(--font-inter);
 }
 
 .header__content h1 {
   margin-bottom: 1rem;
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
 }
 .header__content .section__description {
@@ -185,7 +181,7 @@ nav {
 .header__image img {
   max-width: 450px;
   margin-inline: auto;
-  border-radius: 2rem;
+  border-radius: 25rem;
 }
 
 .header__image::after {
