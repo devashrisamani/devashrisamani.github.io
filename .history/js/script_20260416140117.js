@@ -1,0 +1,148 @@
+// Script for the play button in the header section
+const playBtn = document.getElementById("play-btn");
+const audio = document.getElementById("bg-music");
+let isPlaying = false;
+
+playBtn.addEventListener("click", () => {
+  if (isPlaying) {
+    audio.pause();
+    playBtn.innerHTML = '<i class="ri-play-fill"></i>'; // back to play icon
+  } else {
+    audio.play();
+    playBtn.innerHTML = '<i class="ri-pause-fill"></i>'; // pause icon
+  }
+  isPlaying = !isPlaying;
+});
+
+const navLinks = document.getElementById("nav-links");
+const menuBtn = document.getElementById("menu-btn");
+const menuBtnIcon = menuBtn.querySelector("i");
+
+menuBtn.addEventListener("click", (e) => {
+  navLinks.classList.toggle("open");
+
+  const isOpen = navLinks.classList.contains("open");
+  menuBtnIcon.setAttribute(
+    "class",
+    isOpen ? "ri-close-line" : "ri-menu-3-line",
+  );
+});
+
+navLinks.addEventListener("click", (e) => {
+  navLinks.classList.remove("open");
+  menuBtnIcon.setAttribute("class", "ri-menu-3-line");
+});
+
+const scrollRevealOption = {
+  distance: "50px",
+  origin: "bottom",
+  duration: 1000,
+};
+
+// header container
+ScrollReveal().reveal(".header__content h1", {
+  ...scrollRevealOption,
+});
+
+ScrollReveal().reveal(".header__content .section__description", {
+  ...scrollRevealOption,
+  delay: 500,
+});
+
+ScrollReveal().reveal(".header__content .header__btn", {
+  ...scrollRevealOption,
+  delay: 1000,
+});
+
+// about container
+ScrollReveal().reveal(".about__content .section__header", {
+  ...scrollRevealOption,
+});
+
+ScrollReveal().reveal(".about__content .section__description", {
+  ...scrollRevealOption,
+  delay: 500,
+});
+
+ScrollReveal().reveal(".about__content .about__btn", {
+  ...scrollRevealOption,
+  delay: 1000,
+});
+
+// service container
+ScrollReveal().reveal(".service__card", {
+  ...scrollRevealOption,
+  interval: 500,
+});
+
+// portfolio container
+ScrollReveal().reveal(".portfolio__card", {
+  duration: 1000,
+  interval: 500,
+});
+
+// Button filtering for the work cards
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".portfolio__filter-btn");
+  const cards = document.querySelectorAll(".portfolio__grid .portfolio__card");
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      buttons.forEach((b) => b.classList.remove("is-active"));
+      btn.classList.add("is-active");
+
+      const filter = btn.dataset.filter;
+
+      cards.forEach((card) => {
+        const category = card.dataset.category;
+        const show = filter === "all" || category === filter;
+        card.style.display = show ? "" : "none";
+      });
+    });
+  });
+});
+
+// Interactive experience timeline tabs
+document.addEventListener("DOMContentLoaded", () => {
+  const timelineTabs = document.querySelectorAll(".timeline__item");
+  const timelinePanels = document.querySelectorAll(".timeline__panel");
+
+  if (!timelineTabs.length || !timelinePanels.length) {
+    return;
+  }
+
+  const activateTimelineTab = (tabToActivate) => {
+    const targetPanelId = tabToActivate.dataset.panel;
+
+    timelineTabs.forEach((tab) => {
+      const isActive = tab === tabToActivate;
+      tab.classList.toggle("is-active", isActive);
+      tab.setAttribute("aria-selected", String(isActive));
+      tab.setAttribute("tabindex", isActive ? "0" : "-1");
+    });
+
+    timelinePanels.forEach((panel) => {
+      const shouldShow = panel.id === targetPanelId;
+      panel.classList.toggle("is-active", shouldShow);
+      panel.hidden = !shouldShow;
+    });
+  };
+
+  timelineTabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => activateTimelineTab(tab));
+
+    tab.addEventListener("keydown", (event) => {
+      if (event.key !== "ArrowDown" && event.key !== "ArrowUp") {
+        return;
+      }
+
+      event.preventDefault();
+      const direction = event.key === "ArrowDown" ? 1 : -1;
+      const nextIndex =
+        (index + direction + timelineTabs.length) % timelineTabs.length;
+      const nextTab = timelineTabs[nextIndex];
+      nextTab.focus();
+      activateTimelineTab(nextTab);
+    });
+  });
+});

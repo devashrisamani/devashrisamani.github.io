@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dev's portfolio</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,7 +24,7 @@
     <link rel="stylesheet" href="/css/star-cursor.css" />
 
     <script
-      src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.10/dist/dotlottie-wc.js"
+      src="https://unpkg.com/@lottiefiles/dotlottie-wc/dist/dotlottie-wc.js"
       type="module"
     ></script>
   </head>
@@ -42,7 +41,7 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="play.html" target="_blank" rel="noopener">Play</a></li>
+        <li><a href="play.html">Play</a></li>
         <li><a href="#contact" class="btn">Contact</a></li>
       </ul>
       <a href="#contact" class="btn btn__large">Contact</a>
@@ -51,12 +50,7 @@
       <!-- star trail (header-only) -->
       <canvas id="starCanvas"></canvas>
       <div class="header__image">
-        <dotlottie-wc
-          class="header__lottie"
-          src="https://lottie.host/b47a6925-d8d3-4171-b646-00d08ad2e866/PqFt9sqRhC.lottie"
-          autoplay
-          loop
-        ></dotlottie-wc>
+        <!-- <img src="images/profile4.png" alt="profile" /> -->
       </div>
       <div class="header__content">
         <div>
@@ -104,140 +98,25 @@
       </p>
 
       <div class="portfolio__filters">
-        <button
-          class="portfolio__filter-btn is-active"
-          data-filter="client-work"
-        >
-          Client work
+        <button class="portfolio__filter-btn is-active" data-filter="all">
+          All
         </button>
-        <button class="portfolio__filter-btn" data-filter="she-codes">
-          She Codes
+        <button class="portfolio__filter-btn" data-filter="fullstack">
+          Full Stack
         </button>
-        <!-- <button class="portfolio__filter-btn" data-filter="more">More</button> -->
-        <button class="portfolio__filter-btn" data-filter="all">All</button>
+        <button class="portfolio__filter-btn" data-filter="ux">UX</button>
+        <button class="portfolio__filter-btn" data-filter="current">
+          Currently Working On
+        </button>
       </div>
 
       <div class="portfolio__grid">
-        <div class="portfolio__card" data-category="client-work">
-          <div class="portfolio__thumb">
-            <img src="images/newcardimg/1.jpg" alt="Recentre website" />
-            <span class="portfolio__credit">Image from Pinterest</span>
-          </div>
-          <h3 class="portfolio__title">Recentre</h3>
-          <div class="portfolio__chips" aria-label="Tech stack for Recentre">
-            <span class="portfolio__chip">PHP</span>
-            <span class="portfolio__chip">WordPress</span>
-          </div>
-          <a
-            class="portfolio__link"
-            href="https://devashrisamani.github.io/website_shecodes_week1/"
-            target="_blank"
-            rel="noopener"
-          >
-            Visit project
-            <i class="ri-arrow-right-up-line" aria-hidden="true"></i>
-          </a>
-        </div>
-        <div class="portfolio__card" data-category="client-work">
-          <div class="portfolio__thumb">
-            <img src="images/newcardimg/2.jpg" alt="IoNV" />
-            <span class="portfolio__credit">Image from Pinterest</span>
-          </div>
-          <h3 class="portfolio__title">IoNV</h3>
-          <div class="portfolio__chips" aria-label="Tech stack for IoNV">
-            <span class="portfolio__chip">WordPress</span>
-            <span class="portfolio__chip">Amelia</span>
-            <span class="portfolio__chip">Custom CSS</span>
-          </div>
-          <a
-            class="portfolio__link"
-            href="https://ionv.com.au"
-            target="_blank"
-            rel="noopener"
-          >
-            Visit project
-            <i class="ri-arrow-right-up-line" aria-hidden="true"></i>
-          </a>
-        </div>
-        <div class="portfolio__card" data-category="client-work">
-          <div class="portfolio__thumb">
-            <img src="images/newcardimg/3.jpg" alt="portfolio coming soon" />
-            <span class="portfolio__credit">Image from Pinterest</span>
-          </div>
-          <h3 class="portfolio__title">CEDE</h3>
-          <div class="portfolio__chips" aria-label="Tech stack for CEDE">
-            <span class="portfolio__chip">Python</span>
-            <span class="portfolio__chip">Django</span>
-            <span class="portfolio__chip">Docker</span>
-          </div>
-          <a
-            class="portfolio__link"
-            href="https://cede.isek.org"
-            target="_blank"
-            rel="noopener"
-          >
-            Visit project
-            <i class="ri-arrow-right-up-line" aria-hidden="true"></i>
-          </a>
-        </div>
-
-        <div class="portfolio__card" data-category="she-codes">
-          <div class="portfolio__thumb">
-            <img src="images/newcardimg/4.jpg" alt="Pixel Pulse" />
-            <span class="portfolio__credit">Image from Pinterest</span>
-          </div>
-          <h3 class="portfolio__title">Pixel Pulse</h3>
-          <div class="portfolio__chips" aria-label="Tech stack for Pixel Pulse">
-            <span class="portfolio__chip">JavaScript</span>
-            <span class="portfolio__chip">React</span>
-            <span class="portfolio__chip">Django DRF</span>
-          </div>
-          <a
-            class="portfolio__link"
-            href="https://pixel-pulse-frontend.netlify.app/"
-            target="_blank"
-            rel="noopener"
-          >
-            Visit project
-            <i class="ri-arrow-right-up-line" aria-hidden="true"></i>
-          </a>
-        </div>
-        <div class="portfolio__card" data-category="she-codes">
-          <div class="portfolio__thumb">
-            <img src="images/newcardimg/5.jpg" alt="She Codes website" />
-            <span class="portfolio__credit">Image from Pinterest</span>
-          </div>
-          <h3 class="portfolio__title">Leaf a Mark</h3>
-          <div class="portfolio__chips" aria-label="Tech stack for Leaf a Mark">
-            <span class="portfolio__chip">JavaScript</span>
-            <span class="portfolio__chip">React</span>
-            <span class="portfolio__chip">Django DRF</span>
-          </div>
-          <a
-            class="portfolio__link"
-            href="https://6991a6f02b908e00081c70a3--leafamark.netlify.app"
-            target="_blank"
-            rel="noopener"
-          >
-            Visit project
-            <i class="ri-arrow-right-up-line" aria-hidden="true"></i>
-          </a>
-        </div>
-        <!--
-        <div class="portfolio__card" data-category="more">
+        <div class="portfolio__card" data-category="fullstack">
           <div class="portfolio__thumb">
             <img src="images/portfolio1.jpg" alt="She Codes website" />
             <span class="portfolio__credit">Image from Pinterest</span>
           </div>
-          <h3 class="portfolio__title">Menu Scan Order</h3>
-          <div
-            class="portfolio__chips"
-            aria-label="Tech stack for Menu Scan Order"
-          >
-            <span class="portfolio__chip">React</span>
-            <span class="portfolio__chip">Node.js</span>
-            <span class="portfolio__chip">API</span>
-          </div>
+          <h3 class="portfolio__title">CEDE</h3>
           <a
             class="portfolio__link"
             href="https://devashrisamani.github.io/website_shecodes_week1/"
@@ -248,23 +127,30 @@
             <i class="ri-arrow-right-up-line" aria-hidden="true"></i>
           </a>
         </div>
-        <div class="portfolio__card" data-category="more">
+        <div class="portfolio__card" data-category="fullstack">
           <div class="portfolio__thumb">
             <img src="images/portfolio2.jpg" alt="portfolio coming soon" />
             <span class="portfolio__credit">Image from Pinterest</span>
           </div>
-          <h3 class="portfolio__title">Craft Market</h3>
-          <div
-            class="portfolio__chips"
-            aria-label="Tech stack for Craft Market"
-          >
-            <span class="portfolio__chip">Tech 1</span>
-            <span class="portfolio__chip">Tech 2</span>
-            <span class="portfolio__chip">Tech 3</span>
+          <h3 class="portfolio__title">Menu Scan Order</h3>
+        </div>
+        <div class="portfolio__card" data-category="fullstack">
+          <div class="portfolio__thumb">
+            <img src="images/portfolio3.jpg" alt="portfolio coming soon" />
+            <span class="portfolio__credit">Image from Pinterest</span>
           </div>
+          <h3 class="portfolio__title">Leaf a Mark</h3>
+        </div>
+
+        <div class="portfolio__card" data-category="ux">
+          <div class="portfolio__thumb">
+            <img src="images/portfolio1.jpg" alt="She Codes website" />
+            <span class="portfolio__credit">Image from Pinterest</span>
+          </div>
+          <h3 class="portfolio__title">FindU</h3>
           <a
             class="portfolio__link"
-            href="https://example.com"
+            href="https://devashrisamani.github.io/website_shecodes_week1/"
             target="_blank"
             rel="noopener"
           >
@@ -272,24 +158,55 @@
             <i class="ri-arrow-right-up-line" aria-hidden="true"></i>
           </a>
         </div>
-        -->
+        <div class="portfolio__card" data-category="ux">
+          <div class="portfolio__thumb">
+            <img src="images/portfolio1.jpg" alt="She Codes website" />
+            <span class="portfolio__credit">Image from Pinterest</span>
+          </div>
+          <h3 class="portfolio__title">Pixel Weather</h3>
+          <a
+            class="portfolio__link"
+            href="https://devashrisamani.github.io/website_shecodes_week1/"
+            target="_blank"
+            rel="noopener"
+          >
+            Visit project
+            <i class="ri-arrow-right-up-line" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="portfolio__card" data-category="current">
+          <div class="portfolio__thumb">
+            <img src="images/portfolio1.jpg" alt="She Codes website" />
+            <span class="portfolio__credit">Image from Pinterest</span>
+          </div>
+          <h3 class="portfolio__title">In Progress</h3>
+          <a
+            class="portfolio__link"
+            href="https://devashrisamani.github.io/website_shecodes_week1/"
+            target="_blank"
+            rel="noopener"
+          >
+            Visit project
+            <i class="ri-arrow-right-up-line" aria-hidden="true"></i>
+          </a>
+        </div>
       </div>
 
       <div class="portfolio__banner">
         <div class="portfolio__banner__card">
           <span><i class="ri-cup-line"></i></span>
           <h4>Cups of Coffee</h4>
-          <p>Running on caffeine and curiosity</p>
+          <p>Fuel for debugging sessions</p>
         </div>
         <div class="portfolio__banner__card">
           <span><i class="ri-error-warning-line"></i></span>
           <h4>Bug Fixes</h4>
-          <p>Some solved quickly, others taught me patience</p>
+          <p>Fixed many, learned from the rest</p>
         </div>
         <div class="portfolio__banner__card">
-          <span><i class="ri-lightbulb-line"></i></span>
+          <span><i class="ri-git-commit-line"></i></span>
           <h4>Commit Messages</h4>
-          <p>Sometimes precise, sometimes “this should work”</p>
+          <p>Clear when it matters, honest when it doesn’t</p>
         </div>
       </div>
     </section>
@@ -320,257 +237,9 @@
           features. I enjoy working across the stack, collaborating with others,
           and contributing to well-structured engineering workflows.
         </p>
-        <a class="btn" href="resume/Devashri_Samani_Resume-3.pdf" download>
+        <a class="btn" href="resume/devashrisamani_june25.pdf" download>
           <i class="ri-download-line"></i> Resume
         </a>
-      </div>
-    </section>
-
-    <section class="section__container timeline__container" id="experience">
-      <h2 class="section__header">Experience Timeline</h2>
-      <p class="section__description">
-        A quick interactive walk through the teams, projects, and environments
-        where I have built and shipped meaningful digital work.
-      </p>
-
-      <div class="timeline__layout">
-        <div
-          class="timeline"
-          role="tablist"
-          aria-label="Work experience timeline"
-        >
-          <button
-            class="timeline__item is-active"
-            role="tab"
-            id="exp-tab-1"
-            aria-selected="true"
-            aria-controls="exp-panel-1"
-            tabindex="0"
-            data-panel="exp-panel-1"
-          >
-            <span class="timeline__dot" aria-hidden="true"></span>
-            <span class="timeline__meta">
-              <strong>Recentre</strong>
-              <small>Feb 2026 - Present</small>
-            </span>
-          </button>
-
-          <button
-            class="timeline__item"
-            role="tab"
-            id="exp-tab-2"
-            aria-selected="false"
-            aria-controls="exp-panel-2"
-            tabindex="-1"
-            data-panel="exp-panel-2"
-          >
-            <span class="timeline__dot" aria-hidden="true"></span>
-            <span class="timeline__meta">
-              <strong>Institute of Non-Violence</strong>
-              <small>Jun 2025 - Feb 2026</small>
-            </span>
-          </button>
-
-          <button
-            class="timeline__item"
-            role="tab"
-            id="exp-tab-3"
-            aria-selected="false"
-            aria-controls="exp-panel-3"
-            tabindex="-1"
-            data-panel="exp-panel-3"
-          >
-            <span class="timeline__dot" aria-hidden="true"></span>
-            <span class="timeline__meta">
-              <strong>University of Queensland</strong>
-              <small>Jul 2023 - Nov 2025</small>
-            </span>
-          </button>
-
-          <button
-            class="timeline__item"
-            role="tab"
-            id="exp-tab-4"
-            aria-selected="false"
-            aria-controls="exp-panel-4"
-            tabindex="-1"
-            data-panel="exp-panel-4"
-          >
-            <span class="timeline__dot" aria-hidden="true"></span>
-            <span class="timeline__meta">
-              <strong>CEDE Project</strong>
-              <small>Mar 2024 - May 2025</small>
-            </span>
-          </button>
-
-          <button
-            class="timeline__item"
-            role="tab"
-            id="exp-tab-5"
-            aria-selected="false"
-            aria-controls="exp-panel-5"
-            tabindex="-1"
-            data-panel="exp-panel-5"
-          >
-            <span class="timeline__dot" aria-hidden="true"></span>
-            <span class="timeline__meta">
-              <strong>Noodle Factory</strong>
-              <small>Jun 2023 - Jul 2023</small>
-            </span>
-          </button>
-        </div>
-
-        <div
-          class="timeline__panels"
-          id="timeline-details"
-          aria-label="Selected role details"
-        >
-          <article
-            class="timeline__panel is-active"
-            role="tabpanel"
-            id="exp-panel-1"
-            aria-labelledby="exp-tab-1"
-          >
-            <h3>Web Developer - Contract</h3>
-            <p class="timeline__org">Recentre, Brisbane</p>
-            <ul>
-              <li>
-                Developing a custom full-stack LMS using PHP and WordPress for a
-                12-week clinical aftercare program.
-              </li>
-              <li>
-                Building reusable PHP partials and scalable UI patterns across
-                the platform.
-              </li>
-              <li>
-                Integrating REDCap workflows to support secure form capture,
-                participant tracking, and metric-based reporting.
-              </li>
-              <li>
-                Collaborating with UQ, Griffith University, and Mater Hospital
-                on a secure platform serving approximately 800 participants.
-              </li>
-            </ul>
-          </article>
-
-          <article
-            class="timeline__panel"
-            role="tabpanel"
-            id="exp-panel-2"
-            aria-labelledby="exp-tab-2"
-            hidden
-          >
-            <h3>Web Developer - Contract</h3>
-            <p class="timeline__org">Institute of Non-Violence, Brisbane</p>
-            <ul>
-              <li>
-                Rebuilt the WordPress platform with a modular component-based
-                system to improve maintainability and accessibility.
-              </li>
-              <li>
-                Integrated Amelia booking workflows, including scheduling,
-                notifications, and payment-ready service logic.
-              </li>
-              <li>
-                Delivered responsive front-end interfaces and consistent custom
-                styling for mobile and desktop use.
-              </li>
-              <li>
-                Worked directly with stakeholders to translate business needs
-                into scalable website functionality.
-              </li>
-            </ul>
-          </article>
-
-          <article
-            class="timeline__panel"
-            role="tabpanel"
-            id="exp-panel-3"
-            aria-labelledby="exp-tab-3"
-            hidden
-          >
-            <h3>Casual Academic Tutor</h3>
-            <p class="timeline__org">The University of Queensland, Brisbane</p>
-            <ul>
-              <li>
-                Delivered practical classes in HTML, CSS, and JavaScript for
-                front-end web development courses.
-              </li>
-              <li>
-                Mentored 150+ students per semester in debugging, responsive
-                design, and accessibility compliance.
-              </li>
-              <li>
-                Introduced version control and API integration practices using
-                GitHub and REST APIs.
-              </li>
-              <li>
-                Reviewed and coached student projects on maintainability and
-                software engineering fundamentals.
-              </li>
-            </ul>
-          </article>
-
-          <article
-            class="timeline__panel"
-            role="tabpanel"
-            id="exp-panel-4"
-            aria-labelledby="exp-tab-4"
-            hidden
-          >
-            <h3>Web Developer - Contract</h3>
-            <p class="timeline__org">CEDE Project, Brisbane</p>
-            <ul>
-              <li>
-                Built and deployed a Django decision-support application for
-                research-focused experimental design workflows.
-              </li>
-              <li>
-                Implemented dynamic conditional logic and response mapping to
-                deliver context-aware recommendations.
-              </li>
-              <li>
-                Developed backend routing, session-driven navigation, and
-                recommendation engines using Python and Django.
-              </li>
-              <li>
-                Used Docker for consistent environments and improved workflow
-                reliability across development and deployment.
-              </li>
-            </ul>
-          </article>
-
-          <article
-            class="timeline__panel"
-            role="tabpanel"
-            id="exp-panel-5"
-            aria-labelledby="exp-tab-5"
-            hidden
-          >
-            <h3>UI/UX Design Intern</h3>
-            <p class="timeline__org">
-              Noodle Factory (UQ Ventures Startup Adventure), Singapore
-            </p>
-            <ul>
-              <li>
-                Selected among 30 participants from 100+ applicants for the UQ
-                Ventures Startup Adventure program.
-              </li>
-              <li>
-                Collaborated with product and engineering teams to prototype AI
-                education dashboard features.
-              </li>
-              <li>
-                Mapped user workflows and translated product requirements into
-                interactive, testable prototypes.
-              </li>
-              <li>
-                Conducted user research and usability testing that informed
-                stronger navigation outcomes.
-              </li>
-            </ul>
-          </article>
-        </div>
       </div>
     </section>
 
@@ -696,6 +365,16 @@
     <footer class="footer">Nothing left down here… except me waving 👋🏼</footer>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="js/script.js"></script>
+    <script type="module">
+      import { DotLottie } from "<https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm>";
+
+      new DotLottie({
+        autoplay: true,
+        loop: true,
+        canvas: document.getElementById("canvas"),
+        src: "<https://lottie.host/YOUR_ANIMATION_ID.lottie>", // replace with your .lottie or .json file URL
+      });
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <!-- Script from Codepen for the spotlight effect -->
     <script>
